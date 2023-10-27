@@ -1,12 +1,40 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../pages/HomeView.vue'
+import DashboardView from '../pages/DashboardView.vue'
+import TransactionView from '../pages/TransactionView.vue'
+import TransactionDetailsView from '../pages/TransactionDetailsView.vue'
+import CustomersView from '../pages/CustomersView.vue'
 
 const routes = [
   {
-    path: '/',
-    name: 'home',
-    component: HomeView
+    path: '/dashboard',
+    component: DashboardView,
+    children: [
+      {
+        path: '', 
+        name: 'dashboard-transactions',
+        component: TransactionView
+      },
+      {
+        path: 'transactions',
+        name: 'dashboard-transactions',
+        component: TransactionView
+      },
+      {
+        path: 'customers',
+        name: 'dashboard-customers',
+        component: CustomersView
+      },
+      {
+        path: 'transaction/:transactionId',
+        name: 'dashboard-transaction',
+        component: TransactionDetailsView
+      }
+    ]
   },
+  {
+    path: '/:pathMatch(.*)*', 
+    redirect: { name: 'dashboard-transactions' } 
+  }
 ]
 
 const router = createRouter({

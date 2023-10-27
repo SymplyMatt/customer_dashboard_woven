@@ -1,21 +1,20 @@
 <template>
-    <div>
+  <div>
+    <Sidebar /> 
+    <main>
       This is the dashboard view
-      <aside>
-        <router-link to="/dashboard/transactions">Transactions</router-link>
-        <router-link to="/dashboard/customers">Customers</router-link>
-        <router-link to="/dashboard/transactions/:1234">Transaction</router-link>
-      </aside>
-  
-      <main>
-        <router-view></router-view>
-      </main>
-    </div>
-  </template>
-  
-  <script>
-  export default {
-    name: 'DashboardView',
+      <router-view></router-view>
+    </main>
+  </div>
+</template>
+
+<script>
+import Sidebar from '../components/dashboard/sidebar/Sidebar.vue'; 
+
+export default {
+  name: 'DashboardView',
+  components: {
+    Sidebar, 
   }
-  </script>
-  
+}
+</script>

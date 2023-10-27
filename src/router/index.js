@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import DashboardView from '../pages/DashboardView.vue'
-import TransactionView from '../pages/TransactionView.vue'
+import Transactions from '../pages/Transactions.vue'
 import TransactionDetailsView from '../pages/TransactionDetailsView.vue'
 import CustomersView from '../pages/CustomersView.vue'
 
@@ -12,12 +12,12 @@ const routes = [
       {
         path: '', 
         name: 'dashboard-transactions',
-        component: TransactionView
+        component: Transactions
       },
       {
         path: 'transactions',
         name: 'dashboard-transactions',
-        component: TransactionView
+        component: Transactions
       },
       {
         path: 'customers',

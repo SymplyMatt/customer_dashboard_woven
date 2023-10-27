@@ -1,7 +1,4 @@
 <template>
-    <div>
-      This is the sidebar
-    </div>
     <aside>
         <router-link to="/dashboard/transactions">Transactions</router-link>
         <router-link to="/dashboard/customers">Customers</router-link>

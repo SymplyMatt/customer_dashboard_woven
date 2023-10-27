@@ -2,7 +2,6 @@
   <div>
     <Sidebar /> 
     <main>
-      This is the dashboard view
       <router-view></router-view>
     </main>
   </div>

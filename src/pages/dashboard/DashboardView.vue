@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div :class="containerClasses">
     <Sidebar /> 
-    <main>
+    <main :class="mainContentClasses">
       <router-view></router-view>
     </main>
   </div>
@@ -12,6 +12,12 @@ import Sidebar from '../../components/dashboard/sidebar/Sidebar.vue';
 
 export default {
   name: 'DashboardView',
+  data() {
+    return {
+      containerClasses: "grid grid-cols-[20%,80%] h-screen bg-[#F4F6F8] h-full",
+      mainContentClasses: "bg-[#F4F6F8] h-full",
+    };
+  },
   components: {
     Sidebar, 
   }

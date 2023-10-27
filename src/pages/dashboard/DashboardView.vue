@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import Sidebar from '../components/dashboard/sidebar/Sidebar.vue'; 
+import Sidebar from '../../components/dashboard/sidebar/Sidebar.vue'; 
 
 export default {
   name: 'DashboardView',

@@ -1,8 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import DashboardView from '../pages/DashboardView.vue'
-import Transactions from '../pages/Transactions.vue'
-import TransactionDetailsView from '../pages/TransactionDetailsView.vue'
-import CustomersView from '../pages/CustomersView.vue'
+import DashboardView from '../pages/dashboard/DashboardView.vue'
+import Transactions from '../pages/dashboard/Transactions.vue'
+import TransactionDetailsView from '../pages/dashboard/TransactionDetailsView.vue'
+import CustomersView from '../pages/dashboard/CustomersView.vue'
 
 const routes = [
   {

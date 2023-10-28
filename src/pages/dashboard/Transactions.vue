@@ -2,10 +2,26 @@
   <TopMain 
     :title="'Dashboard'"
   />
-  <div class="flex flex-col w-full items-center p-10">
+  <div class="flex flex-col w-full items-center p-10 gap-10">
     <Stats />
-    <div class=""></div>
-    <div class=""></div>
+    <div class="flex gap-6 bg-white py-2 px-5 w-full">
+      <router-link :to="''">
+        <div class="flex flex-col items-center gap-1">
+          <div class="">
+            Transactions
+          </div>
+          <div class="nav-border"></div>
+        </div>
+      </router-link>
+      <router-link :to="''">
+        <div class="flex flex-col items-center gap-1">
+          <div class="">
+            Customers
+          </div>
+          <div class="nav-border"></div>
+        </div>
+      </router-link>
+    </div>
   </div>
 </template>
 
@@ -21,3 +37,10 @@ export default {
   },
 }
 </script>
+<style>
+  .nav-border{
+    height: 5px;
+    width: 150px;
+    background-color: #79242F;
+  }
+</style>

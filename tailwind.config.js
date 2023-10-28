@@ -16,11 +16,15 @@ module.exports = {
         '10': '10px',
         '12': '12px',
         '16': '16px',
+        '20': '20px',
       },
       colors: {
         darkBrown: '#79242F',
         lightBlack: '#646668',
         navTitle: '#A4A6A8',
+      },
+      textColor: {
+        'liveGreen': '#0D4840', // Your custom font color
       },
       spacing: {
         '1': '5px',
@@ -46,6 +50,9 @@ module.exports = {
       }, 
       minHeight: {
         '70': '70px',
+      }, 
+      height: {
+        '80': '80px',
       }, 
     },
   },

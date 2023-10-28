@@ -1,12 +1,16 @@
 <template>
-    <div>
-      This is the transaction details
-    </div>
-  </template>
-  
-  <script>
-  export default {
-    name: 'TransactionDetailsView',
+  <TopMain 
+    :title="'Transaction Details'"
+  />
+</template>
+
+<script>
+import TopMain from '../../components/dashboard/main/TopMain.vue'; 
+
+export default {
+  name: 'TransactionDetailsView',
+  components: {
+    TopMain
   }
-  </script>
-  
+}
+</script>

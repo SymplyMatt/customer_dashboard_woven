@@ -32,13 +32,15 @@ data() {
             links : [
                 {
                     text : 'Get Started',
-                    path : '/',
-                    icon : "globe.png"
+                    path : '/get-started',
+                    icon : "globe.png",
+                    hasSubMenu : false,
                 },
                 {
                     text : 'Dashboard',
-                    path : '/',
-                    icon : "dashboard.png"
+                    path : '/dashboard',
+                    icon : "dashboard.png",
+                    hasSubMenu : false,
                 },
             ]
         },
@@ -47,38 +49,45 @@ data() {
             links : [
                 {
                     text : 'Transactions',
-                    path : '/',
-                    icon : "transactions.png"
+                    path : '/transactions',
+                    icon : "transactions.png",
+                    hasSubMenu : false,
                 },
                 {
                     text : 'People',
-                    path : '/',
-                    icon : "people.png"
+                    path : '/people',
+                    icon : "people.png",
+                    hasSubMenu : true,
                 },
                 {
                     text : 'Settlements',
-                    path : '/',
-                    icon : "settlements.png"
+                    path : '/settlements',
+                    icon : "settlements.png",
+                    hasSubMenu : false,
                 },
                 {
                     text : 'Payout',
-                    path : '/',
-                    icon : "payout.png"
+                    path : '/payout',
+                    icon : "payout.png",
+                    hasSubMenu : false,
                 },
                 {
                     text : 'VNUBANs',
-                    path : '/',
-                    icon : "tower.png"
+                    path : '/VNUBANs',
+                    icon : "tower.png",
+                    hasSubMenu : false,
                 },
                 {
                     text : 'Subaccounts',
-                    path : '/',
-                    icon : "bank.png"
+                    path : '/Subaccounts',
+                    icon : "bank.png",
+                    hasSubMenu : false,
                 },
                 {
                     text : 'DD Mandates',
-                    path : '/',
-                    icon : "note.png"
+                    path : '/DD-Mandates',
+                    icon : "note.png",
+                    hasSubMenu : false,
                 },
             ]
         },
@@ -87,18 +96,21 @@ data() {
             links : [
                 {
                     text : 'Audit Trails',
-                    path : '/',
-                    icon : "audit.png"
+                    path : '/Audit-Trails',
+                    icon : "audit.png",
+                    hasSubMenu : false,
                 },
                 {
                     text : 'Teams',
-                    path : '/',
-                    icon : "teams.png"
+                    path : '/Teams',
+                    icon : "teams.png",
+                    hasSubMenu : false,
                 },
                 {
                     text : 'Development',
-                    path : '/',
-                    icon : "code.png"
+                    path : '/Development',
+                    icon : "code.png",
+                    hasSubMenu : false,
                 },
             ]
         },
@@ -109,13 +121,15 @@ data() {
                 links : [
                     {
                         text : 'Settings',
-                        path : '/',
-                        icon : "settings.png"
+                        path : '/Settings',
+                        icon : "settings.png",
+                        hasSubMenu : false,
                     },
                     {
                         text : 'Logout',
-                        path : '/',
-                        icon : "logout.png"
+                        path : '/Logout',
+                        icon : "logout.png",
+                        hasSubMenu : false,
                     },
                 ]
             }

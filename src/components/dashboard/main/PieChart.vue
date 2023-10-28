@@ -9,8 +9,10 @@
       <div class="legend  gap-2">
         <div v-for="(label, index) in chartData.labels" :key="index" class="legend-item gap-2">
           <div class="legend-color" :style="{ backgroundColor: chartData.datasets[0].backgroundColor[index] }"></div>
-          <div class="legend-label">{{ label }}</div>
-          <div class="legend-percent">{{ calculatePercentage(index) }}</div>
+          <div class="flex justify-center items-center gap-1">
+              <span class="legend-label text-12">{{ label }}</span>
+              <span class="italic text-12">{{ calculatePercentage(index) }}</span>
+          </div>
         </div>
       </div>
     </div>
@@ -105,10 +107,6 @@
   .legend-label {
     font-weight: bold;
     margin-right: 5px;
-  }
-  
-  .legend-percent {
-    font-style: italic;
   }
   </style>
   

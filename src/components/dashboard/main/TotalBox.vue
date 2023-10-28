@@ -40,6 +40,7 @@
     methods: {
       changeDuration(newDuration) {
         this.duration = newDuration;
+        this.isOverlayOpen = false;
       },
       changeisOverlayOpen() {
         this.isOverlayOpen = !this.isOverlayOpen;

@@ -31,6 +31,7 @@ module.exports = {
       },
       textColor: {
         'liveGreen': '#0D4840', 
+        'thickGreen': '#188475', 
       },
       spacing: {
         '1': '5px',

@@ -1,10 +1,10 @@
 <template>
-    <div class="flex flex-col justify-between items-center w-full bg-white radius-12 p-5 gap-6">
+    <div class="flex flex-col justify-between items-center w-full bg-white radius-12 p-5 gap-6 h-50">
       <div class="flex justify-between items-center w-full text-textColorDark font-medium">
         <div class="text-12">Total Amount Received</div>
         <div class="flex flex-col justify-center align-center overlay-container w-24 bg-white text-10">
-          <div class="flex justify-center items-center bg-lightGreen p-2 gap-2 w-full cursor-pointer" @click="changeisOverlayOpen()">
-            {{ "This "+ getActiveDurationText().duration }} <i class="fa-solid fa-angle-down"></i>
+          <div class="flex justify-center items-center bg-lightGreen p-2 gap-2 w-full cursor-pointer text-thickGreen" @click="changeisOverlayOpen()">
+            {{ "This "+ getActiveDurationText().duration }} <i class="fa-solid fa-angle-down" v-if="!isOverlayOpen"></i> <i class="fa-solid fa-angle-up" v-if="isOverlayOpen"></i>
           </div>
           <div 
           :class="!isOverlayOpen && 'hide-overlay'"

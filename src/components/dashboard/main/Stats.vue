@@ -2,17 +2,19 @@
     <div class="flex justify-between items-center w-full gap-5">
       <TotalBox :item="totalAmountReceived"/>
       <TotalBox :item="totalPayouts"/>
-      <TotalBox :item="totalAmountReceived"/>
+      <Chart :item="totalAmountReceived"/>
     </div>
   </template>
   
   <script>
   import TotalBox from './TotalBox.vue'; 
+  import Chart from './Chart.vue'; 
   
   export default {
     name: 'Stats',
     components: {
-      TotalBox
+      TotalBox,
+      Chart
     },
     data() {
       return {

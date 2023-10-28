@@ -8,6 +8,7 @@ const routes = [
   {
     path: '/dashboard',
     component: DashboardView,
+    redirect: { name: 'dashboard-transactions' }, 
     children: [
       {
         path: '', 

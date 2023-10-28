@@ -1,15 +1,15 @@
 <template>
-    <div class="flex justify-between items-center w-full gap-10">
+    <div class="flex justify-between items-center w-full gap-2">
       <div class="pie-chart relative">
         <canvas id="myChart"></canvas>
         <div class="total-items text-10">
           <span class="font-extrabold">1260</span><br>Transactions
         </div>
       </div>
-      <div class="legend  gap-2">
-        <div v-for="(label, index) in chartData.labels" :key="index" class="legend-item gap-2">
+      <div class="legend  gap-1">
+        <div v-for="(label, index) in chartData.labels" :key="index" class="legend-item gap-1">
           <div class="legend-color" :style="{ backgroundColor: chartData.datasets[0].backgroundColor[index] }"></div>
-          <div class="flex justify-center items-center gap-1">
+          <div class="flex justify-center items-center">
               <span class="legend-label text-12">{{ label }}</span>
               <span class="italic text-12">{{ calculatePercentage(index) }}</span>
           </div>
@@ -26,11 +26,11 @@
     name: 'PieChart',
     setup() {
       const chartData = {
-        labels: ['Red', 'Blue', 'Yellow'],
+        labels: ['Failed transactions', 'Successful transactions', 'Pending transactions'],
         datasets: [
           {
             data: [300, 50, 100],
-            backgroundColor: ['rgb(255, 99, 132)', 'rgb(54, 162, 235)', 'rgb(255, 205, 86)'],
+            backgroundColor: ['#A63241', '#4BDECA', '#EB8B1E'],
             hoverOffset: 4,
           },
         ]
@@ -95,18 +95,15 @@
   .legend-item {
     display: flex;
     align-items: center;
-    margin-right: 20px;
   }
   
   .legend-color {
     width: 20px;
     height: 20px;
-    margin-right: 5px;
   }
   
   .legend-label {
     font-weight: bold;
-    margin-right: 5px;
   }
   </style>
   

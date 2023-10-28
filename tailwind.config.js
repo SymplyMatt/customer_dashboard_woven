@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundColor: {
-        'blue': '#3490dc', // You can use the color code you prefer
+        'blue': '#3490dc', 
       },
       screens: {
         'sm': '640px',
@@ -17,14 +17,20 @@ module.exports = {
         '12': '12px',
         '16': '16px',
         '20': '20px',
+        '24': '24px',
+        '28': '28px',
       },
       colors: {
         darkBrown: '#79242F',
         lightBlack: '#646668',
         navTitle: '#A4A6A8',
+        greyBorder : '#EEF0F1',
+        textColorDark : '#4E4E4E',
+        brightRed : "#C94A5A",
+        lightGreen : "#E4F7F5",
       },
       textColor: {
-        'liveGreen': '#0D4840', // Your custom font color
+        'liveGreen': '#0D4840', 
       },
       spacing: {
         '1': '5px',

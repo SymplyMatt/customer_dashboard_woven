@@ -1,7 +1,7 @@
 <template>
     <div
       :class="isActive ? 'text-darkBrown font-extrabold pl-11 border-left' : 'text-lightBlack pl-4'"
-      class="font-medium gap-2 text-5 flex items-center justify-between pr-4"
+      class="font-medium gap-2 text-5 flex items-center justify-between pr-4 cursor-pointer"
     >  
         <router-link :to="item.path.toLowerCase()" v-if="item">
             <div class="font-medium cursor-pointer gap-2 text-5 flex items-center">

@@ -4,7 +4,7 @@
   />
   <div class="flex flex-col w-full p-10 gap-5 overflow-y-scroll main-content-dashboard">
     <div class="flex flex-col gap-1 justify-start">
-      <div class="text-lightBlack font-12 font-normal">
+      <div class="text-lightBlack font-12 font-normal cursor-pointer" @click="goBack">
         <i class="fa-solid fa-angle-left"></i> Back
       </div>
       <div class="font-14 font-medium">
@@ -78,6 +78,11 @@ export default {
   components: {
     TopMain,
   },
+  methods: {
+    goBack() {
+      this.$router.go(-1);
+    }
+  }
 }
 </script>
 <style>

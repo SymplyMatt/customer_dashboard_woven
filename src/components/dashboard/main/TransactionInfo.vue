@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-white flex flex-col px-5 w-full r-8">
+    <div class="bg-white flex flex-col px-5 w-full r-8 h-min-content">
         <div class="p-4 b-btm flex justify-between w-full items-center text-left">
             <div class="w-full flex flex gap-1 p-1 items-start"><div class="b-1 h-6 w-6 rounded-full text-14 bg-lightGreen flex items-center justify-center text-thickGreen font-etxrabold"><i class="fa-solid fa-check"></i></div> 8012682284</div>
             <div class="w-full flex flex-col items-end text-right">

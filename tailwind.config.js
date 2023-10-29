@@ -35,13 +35,20 @@ module.exports = {
         payout : '#79242F',
         collection : '#0B3C35',
         failed : '#FFE5E9',
-        failedText : '#79242F'
+        failedText : '#79242F',
+        greenRound : '#188475',
+        greyRound : '#D4D6D8',
+        orangeRound : '#EB8B1E',
+        greyBtn : '#F9FAFB',
+
       },
       textColor: {
         'liveGreen': '#0D4840', 
         'thickGreen': '#188475', 
       },
       spacing: {
+        'thin': '1px',
+        'log': '8px',
         '1': '5px',
         '2': '10px',
         '3': '12px',
@@ -63,6 +70,7 @@ module.exports = {
         '180': '180px',
         '50': '200px',
         '100': '400px',
+        'greyBtnWidth': '230px',
       }, 
       minHeight: {
         '70': '70px',

@@ -23,11 +23,17 @@ module.exports = {
       colors: {
         darkBrown: '#79242F',
         lightBlack: '#646668',
+        headerBlack: '#848688',
         navTitle: '#A4A6A8',
         greyBorder : '#EEF0F1',
         textColorDark : '#4E4E4E',
         brightRed : "#C94A5A",
         lightGreen : "#E4F7F5",
+        blackName : "#4F4F4F",
+        tableEven : "#F9FAFB",
+        payout : '#79242F',
+        collection : '#0B3C35',
+        failed : '#FFE5E9'
       },
       textColor: {
         'liveGreen': '#0D4840', 

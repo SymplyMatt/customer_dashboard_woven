@@ -33,7 +33,8 @@ module.exports = {
         tableEven : "#F9FAFB",
         payout : '#79242F',
         collection : '#0B3C35',
-        failed : '#FFE5E9'
+        failed : '#FFE5E9',
+        failedText : '#79242F'
       },
       textColor: {
         'liveGreen': '#0D4840', 

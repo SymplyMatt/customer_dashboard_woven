@@ -59,7 +59,7 @@
   
         function calculatePercentage(index) {
           const total = chartData.datasets[0].data.reduce((acc, value) => acc + value, 0);
-          return ((chartData.datasets[0].data[index] / total) * 100).toFixed(2) + '%';
+          return (Math.round((chartData.datasets[0].data[index] / total) * 100)) + '%';
         }
   
         return {

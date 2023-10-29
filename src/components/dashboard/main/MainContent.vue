@@ -2,7 +2,7 @@
     <div class="flex flex-col w-full items-center p-10 gap-10 overflow-y-scroll main-content-dashboard">
       <Stats />
       <div class="flex flex-col justify-center items-center w-full gap-4">
-        <LowerNav :route="route"/>
+        <LowerNav :route="route" :toggleView="toggleView"/>
 
         <div class="flex flex-col w-full  bg-white r-12">
           <div class="flex flex-col justify-center items-center  w-full"  v-if="route == 'transactions'">
@@ -61,7 +61,7 @@
   
   export default {
     name: 'MainContent',
-    props : ['route'],
+    props : ['route', 'toggleView'],
     components: {
       Stats,
       LowerNav,

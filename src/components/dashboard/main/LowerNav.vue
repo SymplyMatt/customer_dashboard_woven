@@ -5,6 +5,7 @@
         :key="index"
         :item="i" 
         :route="route" 
+        :toggleView="toggleView"
         />
     </div>
   </template>
@@ -14,7 +15,7 @@
   
   export default {
     name: 'LowerNav',
-    props : ['route'],
+    props : ['route', 'toggleView'],
     components: {
       LowerNavItem
     },

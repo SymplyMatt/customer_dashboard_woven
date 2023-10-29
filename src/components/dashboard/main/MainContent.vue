@@ -7,15 +7,14 @@
         <div class="flex flex-col justify-center items-center w-full  bg-white r-12">
           <div class="flex flex-col justify-center items-center  w-full">
             <div class="grid-table-7 justify-between align-center w-full greyBorder px-5 text-headerBlack font-extrabold text-12  py-2">
-              <div class="flex flex-row items-center py-2 uppercase">Customer</div>
-              <div class="flex flex-row items-center py-2 uppercase">Amount</div>
-              <div class="flex flex-row items-center py-2 uppercase">Reference</div>
-              <div class="flex flex-row items-center py-2 uppercase items-center justify-center">Channel</div>
-              <div class="flex flex-row items-center py-2 uppercase items-center justify-center">Status</div>
-              <div class="flex flex-row items-center py-2 uppercase items-center justify-center">Type</div>
-              <div class="flex flex-row items-center py-2 uppercase">Payment Date</div>
+              <TransactionTableHeader 
+                v-for="(i, index) in transactionsHeaders"
+                :key="index"
+                :item="i"
+                :index="index + 1"
+              />
             </div>
-            <TableDataItem 
+            <TransactionTableDataItem 
               v-for="(i, index) in transactions"
               :key="index"
               :item="i"
@@ -31,7 +30,8 @@
   <script>
   import Stats from './Stats.vue'; 
   import LowerNav from './LowerNav.vue'; 
-  import TableDataItem from './TableDataItem.vue'; 
+  import TransactionTableHeader from './TransactionTableHeader.vue'; 
+  import TransactionTableDataItem from './TransactionTableDataItem.vue'; 
   
   export default {
     name: 'MainContent',
@@ -39,7 +39,8 @@
     components: {
       Stats,
       LowerNav,
-      TableDataItem
+      TransactionTableDataItem,
+      TransactionTableHeader
     },
     data(){
       return{
@@ -154,7 +155,33 @@
             type: "Payout",
             paymentDate: "March 15, 2023 6:55 AM"
           },
-        ]
+        ],
+        transactionsHeaders :[
+          {
+            title : 'Customer'
+          },
+          {
+            title : 'Amount'
+          },
+          {
+            title : 'Reference'
+          },
+          {
+            title : 'Channel'
+          },
+          {
+            title : 'Status',
+            hasSub : true
+          },
+          {
+            title : 'Type',
+            hasSub : true
+          },
+          {
+            title : 'Payment Date',
+            hasSub : true
+          },
+        ] 
       }
     }
   }

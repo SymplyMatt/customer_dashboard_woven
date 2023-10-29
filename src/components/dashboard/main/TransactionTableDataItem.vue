@@ -21,7 +21,7 @@
   
   <script>
   export default {
-    name: 'TableDataItem',
+    name: 'TransactionTableDataItem',
     props : ['item', 'index']
   }
 </script>

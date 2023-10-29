@@ -4,9 +4,9 @@
       <div class="flex flex-col justify-center items-center w-full gap-4">
         <LowerNav :route="route"/>
 
-        <div class="flex flex-col justify-center items-center w-full  bg-white r-12">
+        <div class="flex flex-col w-full  bg-white r-12">
           <div class="flex flex-col justify-center items-center  w-full"  v-if="route == 'transactions'">
-            <div class="grid-table-7 justify-between align-center w-full greyBorder px-5 text-headerBlack font-extrabold text-12  py-2">
+            <div class="grid-table-7 justify-between align-center w-full greyBorder-btm px-5 text-headerBlack font-extrabold text-12  py-2">
               <TransactionTableHeader 
                 v-for="(i, index) in transactionsHeaders"
                 :key="index"
@@ -23,7 +23,7 @@
           </div>
           
           <div class="flex flex-col justify-center items-center  w-full"   v-if="route == 'customers'">
-            <div class="grid-table-5 justify-between align-center w-full greyBorder px-5 text-headerBlack font-extrabold text-12  py-2">
+            <div class="grid-table-5 justify-between align-center w-full greyBorder-btm px-5 text-headerBlack font-extrabold text-12  py-2">
               <CustomersTableHeaders 
                 v-for="(i, index) in customersHeaders"
                 :key="index"
@@ -37,6 +37,14 @@
               :index="index + 1"
             />
           </div>
+          <div class="flex flex-row justify-end w-full px-5 greyBorder-top uppercase py-2 text-12 text-darkBrown underline font-extrabold cursor-pointer">
+            <div v-if="route === 'transactions'">
+              See all transactions
+            </div>
+            <div v-else-if="route === 'customers'">
+              See all customers</div>
+          </div>
+
         </div>
       </div>
 
@@ -73,7 +81,7 @@
             channel: "CARD",
             status: "Successful",
             type: "Payout",
-            paymentDate: "March 3, 2023 4:25 PM"
+            paymentDate: "December 30, 2023 23:25 PM"
           },
           {
             customerName: "Alice Johnson",
@@ -83,7 +91,7 @@
             channel: "Transfer",
             status: "Failed",
             type: "Collection",
-            paymentDate: "March 12, 2023 2:10 PM"
+            paymentDate: "December 30, 2023 23:25 PM"
           },
           {
             customerName: "Bob Smith",
@@ -93,7 +101,7 @@
             channel: "CARD",
             status: "Successful",
             type: "Payout",
-            paymentDate: "March 7, 2023 8:45 AM"
+            paymentDate: "December 30, 2023 23:25 PM"
           },
           {
             customerName: "Ella Brown",
@@ -103,7 +111,7 @@
             channel: "Transfer",
             status: "Successful",
             type: "Collection",
-            paymentDate: "March 9, 2023 1:30 PM"
+            paymentDate: "December 30, 2023 23:25 PM"
           },
           {
             customerName: "David Wilson",
@@ -113,7 +121,7 @@
             channel: "CARD",
             status: "Failed",
             type: "Payout",
-            paymentDate: "March 15, 2023 6:55 AM"
+            paymentDate: "December 30, 2023 23:25 PM"
           },
           {
             customerName: "John Doe",
@@ -123,7 +131,7 @@
             channel: "CARD",
             status: "Successful",
             type: "Payout",
-            paymentDate: "March 3, 2023 4:25 PM"
+            paymentDate: "December 30, 2023 23:25 PM"
           },
           {
             customerName: "Alice Johnson",
@@ -133,7 +141,7 @@
             channel: "Transfer",
             status: "Failed",
             type: "Collection",
-            paymentDate: "March 12, 2023 2:10 PM"
+            paymentDate: "December 30, 2023 23:25 PM"
           },
           {
             customerName: "Bob Smith",
@@ -143,7 +151,7 @@
             channel: "CARD",
             status: "Successful",
             type: "Payout",
-            paymentDate: "March 7, 2023 8:45 AM"
+            paymentDate: "December 30, 2023 23:25 PM"
           },
           {
             customerName: "Ella Brown",
@@ -153,7 +161,7 @@
             channel: "Transfer",
             status: "Successful",
             type: "Collection",
-            paymentDate: "March 9, 2023 1:30 PM"
+            paymentDate: "December 30, 2023 23:25 PM"
           },
           {
             customerName: "David Wilson",
@@ -163,7 +171,7 @@
             channel: "CARD",
             status: "Failed",
             type: "Payout",
-            paymentDate: "March 15, 2023 6:55 AM"
+            paymentDate: "December 30, 2023 23:25 PM"
           },
           {
             customerName: "David Wilson",
@@ -173,7 +181,7 @@
             channel: "CARD",
             status: "Failed",
             type: "Payout",
-            paymentDate: "March 15, 2023 6:55 AM"
+            paymentDate: "December 30, 2023 23:25 PM"
           },
         ],
         transactionsHeaders :[
@@ -209,7 +217,7 @@
             phone: "09183746372",
             reference: "COMPLETE SIZE",
             nuban: "0938475648",
-            dateCreated: "December 23, 2022 4:25 PM"
+            dateCreated: "December 30, 2023 23:25 PM"
           },
           {
             customerName: "John Doe",
@@ -217,7 +225,7 @@
             phone: "09183746372",
             reference: "COMPLETE SIZE",
             nuban: "0938475648",
-            dateCreated: "December 23, 2022 4:25 PM"
+            dateCreated: "December 30, 2023 23:25 PM"
           },
           {
             customerName: "John Doe",
@@ -225,7 +233,7 @@
             phone: "09183746372",
             reference: "COMPLETE SIZE",
             nuban: "0938475648",
-            dateCreated: "December 23, 2022 4:25 PM"
+            dateCreated: "December 30, 2023 23:25 PM"
           },
           {
             customerName: "John Doe",
@@ -233,7 +241,7 @@
             phone: "09183746372",
             reference: "COMPLETE SIZE",
             nuban: "0938475648",
-            dateCreated: "December 23, 2022 4:25 PM"
+            dateCreated: "December 30, 2023 23:25 PM"
           },
           {
             customerName: "John Doe",
@@ -241,7 +249,7 @@
             phone: "09183746372",
             reference: "COMPLETE SIZE",
             nuban: "0938475648",
-            dateCreated: "December 23, 2022 4:25 PM"
+            dateCreated: "December 30, 2023 23:25 PM"
           },
           {
             customerName: "John Doe",
@@ -249,7 +257,7 @@
             phone: "09183746372",
             reference: "COMPLETE SIZE",
             nuban: "0938475648",
-            dateCreated: "December 23, 2022 4:25 PM"
+            dateCreated: "December 30, 2023 23:25 PM"
           },
           {
             customerName: "John Doe",
@@ -257,7 +265,7 @@
             phone: "09183746372",
             reference: "COMPLETE SIZE",
             nuban: "0938475648",
-            dateCreated: "December 23, 2022 4:25 PM"
+            dateCreated: "December 30, 2023 23:25 PM"
           },
           {
             customerName: "John Doe",
@@ -265,7 +273,7 @@
             phone: "09183746372",
             reference: "COMPLETE SIZE",
             nuban: "0938475648",
-            dateCreated: "December 23, 2022 4:25 PM"
+            dateCreated: "December 30, 2023 23:25 PM"
           },
           {
             customerName: "John Doe",
@@ -273,7 +281,7 @@
             phone: "09183746372",
             reference: "COMPLETE SIZE",
             nuban: "0938475648",
-            dateCreated: "December 23, 2022 4:25 PM"
+            dateCreated: "December 30, 2023 23:25 PM"
           },
           {
             customerName: "John Doe",
@@ -281,7 +289,7 @@
             phone: "09183746372",
             reference: "COMPLETE SIZE",
             nuban: "0938475648",
-            dateCreated: "December 23, 2022 4:25 PM"
+            dateCreated: "December 30, 2023 23:25 PM"
           },
           {
             customerName: "John Doe",
@@ -289,7 +297,7 @@
             phone: "09183746372",
             reference: "COMPLETE SIZE",
             nuban: "0938475648",
-            dateCreated: "December 23, 2022 4:25 PM"
+            dateCreated: "December 30, 2023 23:25 PM"
           },
 
         ],
@@ -326,8 +334,11 @@
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 2fr 2fr 
   }
-  .greyBorder{
+  .greyBorder-btm{
     border-bottom:  2px solid #EEF0F1;
+  }
+  .greyBorder-top{
+    border-top:  2px solid #EEF0F1;
   }
   .r-12{
     border-radius: 12px;

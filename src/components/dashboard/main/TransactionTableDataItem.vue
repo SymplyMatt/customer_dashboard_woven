@@ -15,7 +15,7 @@
         <div 
         :class="item.type.toLowerCase() =='payout' ? 'text-payout' : item.type.toLowerCase() == 'collection' ? 'text-collection' : ''"
         class="flex flex-row py-2 flex flex-col py-2 text-12 gap-1  justify-center uppercase items-center">{{ item.type }}</div>
-        <div class="flex flex-row py-2 flex flex-col py-2 text-12 gap-1 text-headerBlack justify-center">{{ item.paymentDate }}</div>
+        <div class="flex flex-row py-2 flex flex-col py-2 text-12 gap-1 text-headerBlack justify-center  overflow-x-auto">{{ item.paymentDate }}</div>
     </div>
   </template>
   

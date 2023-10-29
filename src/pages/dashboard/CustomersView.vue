@@ -2,22 +2,23 @@
   <TopMain 
     :title="'Dashboard'"
   />
-  <div class="flex flex-col w-full items-center p-10">
-    <Stats />
-    <div class=""></div>
-    <div class=""></div>
-  </div>
+  <MainContent :route="route" />
 </template>
 
 <script>
 import TopMain from '../../components/dashboard/main/TopMain.vue'; 
-import Stats from '../../components/dashboard/main/Stats.vue'; 
+import MainContent from '../../components/dashboard/main/MainContent.vue'; 
 
 export default {
-  name: 'Customers',
+  name: 'Transactions',
   components: {
     TopMain,
-    Stats
+    MainContent,
   },
+  data(){
+    return {
+      route : 'customers'
+    }
+  }
 }
 </script>

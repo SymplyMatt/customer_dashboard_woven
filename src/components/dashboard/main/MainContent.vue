@@ -4,7 +4,7 @@
       <div class="flex flex-col justify-center items-center w-full gap-4">
         <LowerNav :route="route"/>
 
-        <div class="flex flex-col justify-center items-center w-full  bg-white">
+        <div class="flex flex-col justify-center items-center w-full  bg-white r-12">
           <div class="flex flex-col justify-center items-center  w-full">
             <div class="grid-table-7 justify-between align-center w-full greyBorder px-5 text-headerBlack font-extrabold text-12  py-2">
               <div class="flex flex-row items-center py-2 uppercase">Customer</div>
@@ -144,6 +144,16 @@
             type: "Payout",
             paymentDate: "March 15, 2023 6:55 AM"
           },
+          {
+            customerName: "David Wilson",
+            customerEmail: "davidwilson@outlook.com",
+            amount: "₦13,678,921.50",
+            reference: "wf_py_64_1xyn9myhgrft",
+            channel: "CARD",
+            status: "Failed",
+            type: "Payout",
+            paymentDate: "March 15, 2023 6:55 AM"
+          },
         ]
       }
     }
@@ -159,6 +169,9 @@
   }
   .greyBorder{
     border-bottom:  2px solid #EEF0F1;
+  }
+  .r-12{
+    border-radius: 12px;
   }
 </style>
   

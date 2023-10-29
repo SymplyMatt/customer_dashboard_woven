@@ -5,7 +5,7 @@
         <LowerNav :route="route"/>
 
         <div class="flex flex-col justify-center items-center w-full  bg-white r-12">
-          <div class="flex flex-col justify-center items-center  w-full">
+          <div class="flex flex-col justify-center items-center  w-full"  v-if="route == 'transactions'">
             <div class="grid-table-7 justify-between align-center w-full greyBorder px-5 text-headerBlack font-extrabold text-12  py-2">
               <TransactionTableHeader 
                 v-for="(i, index) in transactionsHeaders"
@@ -16,6 +16,22 @@
             </div>
             <TransactionTableDataItem 
               v-for="(i, index) in transactions"
+              :key="index"
+              :item="i"
+              :index="index + 1"
+            />
+          </div>
+          
+          <div class="flex flex-col justify-center items-center  w-full"   v-if="route == 'customers'">
+            <div class="grid-table-5 justify-between align-center w-full greyBorder px-5 text-headerBlack font-extrabold text-12  py-2">
+              <CustomersTableHeaders 
+                v-for="(i, index) in customersHeaders"
+                :key="index"
+                :item="i"
+              />
+            </div>
+            <CustomerTableItem 
+              v-for="(i, index) in customers"
               :key="index"
               :item="i"
               :index="index + 1"
@@ -32,6 +48,8 @@
   import LowerNav from './LowerNav.vue'; 
   import TransactionTableHeader from './TransactionTableHeader.vue'; 
   import TransactionTableDataItem from './TransactionTableDataItem.vue'; 
+  import CustomersTableHeaders from './CustomersTableHeaders.vue'; 
+  import CustomerTableItem from './CustomerTableItem.vue'; 
   
   export default {
     name: 'MainContent',
@@ -40,7 +58,9 @@
       Stats,
       LowerNav,
       TransactionTableDataItem,
-      TransactionTableHeader
+      TransactionTableHeader,
+      CustomersTableHeaders,
+      CustomerTableItem
     },
     data(){
       return{
@@ -181,6 +201,114 @@
             title : 'Payment Date',
             hasSub : true
           },
+        ], 
+        customers : [
+          {
+            customerName: "John Doe",
+            customerEmail: "johndoe@gmail.com",
+            phone: "09183746372",
+            reference: "COMPLETE SIZE",
+            nuban: "0938475648",
+            dateCreated: "December 23, 2022 4:25 PM"
+          },
+          {
+            customerName: "John Doe",
+            customerEmail: "johndoe@gmail.com",
+            phone: "09183746372",
+            reference: "COMPLETE SIZE",
+            nuban: "0938475648",
+            dateCreated: "December 23, 2022 4:25 PM"
+          },
+          {
+            customerName: "John Doe",
+            customerEmail: "johndoe@gmail.com",
+            phone: "09183746372",
+            reference: "COMPLETE SIZE",
+            nuban: "0938475648",
+            dateCreated: "December 23, 2022 4:25 PM"
+          },
+          {
+            customerName: "John Doe",
+            customerEmail: "johndoe@gmail.com",
+            phone: "09183746372",
+            reference: "COMPLETE SIZE",
+            nuban: "0938475648",
+            dateCreated: "December 23, 2022 4:25 PM"
+          },
+          {
+            customerName: "John Doe",
+            customerEmail: "johndoe@gmail.com",
+            phone: "09183746372",
+            reference: "COMPLETE SIZE",
+            nuban: "0938475648",
+            dateCreated: "December 23, 2022 4:25 PM"
+          },
+          {
+            customerName: "John Doe",
+            customerEmail: "johndoe@gmail.com",
+            phone: "09183746372",
+            reference: "COMPLETE SIZE",
+            nuban: "0938475648",
+            dateCreated: "December 23, 2022 4:25 PM"
+          },
+          {
+            customerName: "John Doe",
+            customerEmail: "johndoe@gmail.com",
+            phone: "09183746372",
+            reference: "COMPLETE SIZE",
+            nuban: "0938475648",
+            dateCreated: "December 23, 2022 4:25 PM"
+          },
+          {
+            customerName: "John Doe",
+            customerEmail: "johndoe@gmail.com",
+            phone: "09183746372",
+            reference: "COMPLETE SIZE",
+            nuban: "0938475648",
+            dateCreated: "December 23, 2022 4:25 PM"
+          },
+          {
+            customerName: "John Doe",
+            customerEmail: "johndoe@gmail.com",
+            phone: "09183746372",
+            reference: "COMPLETE SIZE",
+            nuban: "0938475648",
+            dateCreated: "December 23, 2022 4:25 PM"
+          },
+          {
+            customerName: "John Doe",
+            customerEmail: "johndoe@gmail.com",
+            phone: "09183746372",
+            reference: "COMPLETE SIZE",
+            nuban: "0938475648",
+            dateCreated: "December 23, 2022 4:25 PM"
+          },
+          {
+            customerName: "John Doe",
+            customerEmail: "johndoe@gmail.com",
+            phone: "09183746372",
+            reference: "COMPLETE SIZE",
+            nuban: "0938475648",
+            dateCreated: "December 23, 2022 4:25 PM"
+          },
+
+        ],
+        customersHeaders :[
+          {
+            title : 'Customer'
+          },
+          {
+            title : 'Phone'
+          },
+          {
+            title : 'NUBAN'
+          },
+          {
+            title : 'Reference'
+          },
+          {
+            title : 'Date Created'
+          },
         ] 
       }
     }
@@ -193,6 +321,10 @@
   .grid-table-7{
     display: grid;
     grid-template-columns: 2fr 1.5fr 2fr 1fr 1fr 1fr 2fr;
+  }
+  .grid-table-5{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 2fr 2fr 
   }
   .greyBorder{
     border-bottom:  2px solid #EEF0F1;

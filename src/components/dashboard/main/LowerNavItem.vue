@@ -1,7 +1,7 @@
 <template>
     <router-link :to="'/dashboard/'+ item.toLowerCase()">
         <div class="flex flex-col items-center gap-1">
-          <div class="">
+          <div :class="item.toLowerCase() == route && 'text-darkBrown'">
             {{ item }}
           </div>
           <div 

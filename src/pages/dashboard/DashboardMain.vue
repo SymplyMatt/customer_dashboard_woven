@@ -3,7 +3,7 @@
         :title="'Dashboard'"
     />
     <MainContent :route="view" :toggleView="toggleView"/>
-  </template>
+</template>
   
   <script>
   import MainContent from '../../components/dashboard/main/MainContent.vue'; 
@@ -28,18 +28,5 @@
       }
     }
   }
-  </script>
-  
-  <style>
-    @import url('https://fonts.cdnfonts.com/css/avenir');
-  
-    .dashboard-container{
-      font-family: Avenir;
-    }
-    .main-dashoard{
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: 80px calc(100vh - 80px);
-    }
-  </style>
+</script>
   

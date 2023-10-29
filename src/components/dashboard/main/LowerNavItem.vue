@@ -2,7 +2,7 @@
     <router-link :to="'/dashboard/'+ item.toLowerCase()">
         <div class="flex flex-col items-center gap-1">
           <div :class="item.toLowerCase() == route && 'text-darkBrown'">
-            {{ item }}
+            {{ item }} {{ item.toLowerCase() == 'customers' ? '[32]' : '' }}
           </div>
           <div 
           :class="item.toLowerCase() != route && 'visibility-hidden'"

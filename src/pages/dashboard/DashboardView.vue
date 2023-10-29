@@ -15,7 +15,7 @@ export default {
   data() {
     return {
       containerClasses: "grid grid-cols-[20%,80%] h-screen bg-[#F4F6F8] h-full dashboard-container",
-      mainContentClasses: "bg-[#F4F6F8] h-full flex flex-col",
+      mainContentClasses: "bg-[#F4F6F8] h-full main-dashoard",
     };
   },
   components: {
@@ -28,6 +28,11 @@ export default {
 
   .dashboard-container{
     font-family: Avenir;
+  }
+  .main-dashoard{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px calc(100vh - 80px);
   }
 </style>
                 

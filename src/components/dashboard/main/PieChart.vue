@@ -29,7 +29,7 @@
         labels: ['Failed transactions', 'Successful transactions', 'Pending transactions'],
         datasets: [
           {
-            data: [300, 50, 100],
+            data: [63, 1170, 25],
             backgroundColor: ['#A63241', '#4BDECA', '#EB8B1E'],
             hoverOffset: 4,
           },

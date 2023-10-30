@@ -1,5 +1,5 @@
 <template>
-  <div :class="computedClasses" class="grid-table-7 justify-between w-full px-5">
+  <div :class="computedClasses" class="grid-table-7 justify-between w-full px-5 cursor-pointer" @click="navigateTo">
     <div class="flex flex-col py-2 text-12 gap-1  justify-center">
       <div 
       :class="isDarkMode ? 'text-textGreyDark' : 'text-blackName '"
@@ -42,6 +42,11 @@ export default {
       };
     },
   },
+  methods: {
+    navigateTo() {
+        this.$router.push('/dashboard/transaction/1234');
+      }
+    }
 };
 </script>
 

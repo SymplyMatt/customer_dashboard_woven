@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import { useStore } from 'vuex'; // Import useStore from Vuex
+import { useStore } from 'vuex';
 
 export default {
     name: 'Link',

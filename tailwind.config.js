@@ -7,7 +7,9 @@ module.exports = {
         'blue': '#3490dc', 
       },
       screens: {
+        'phone': '450px',
         'sm': '640px',
+        'sm-tab': '700px',
         'md': '1200px', 
         'mm': '900px', 
         'lg': '1500px',

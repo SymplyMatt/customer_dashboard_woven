@@ -4,7 +4,7 @@
   />
   <div class="flex flex-col w-full p-10 gap-5 overflow-y-scroll main-content-dashboard">
     <TransactionDetailsBack />
-    <div class="flex justify-between w-full gap-8">
+    <div class="flex flex-col sm-tab:flex-row justify-between w-full gap-8">
       <TransactionInfo />
       <TransactionLogs />
     </div>

@@ -32,6 +32,9 @@ export default {
           if (item.toLowerCase() != route) {
           classNames.push('visibility-hidden');
         }
+        if(this.isDarkMode){
+          classNames.push('darkModeBorder');
+        }
       }
 
       return classNames.join(' ');
@@ -50,6 +53,9 @@ export default {
   height: 5px;
   width: 150px;
   background-color: #79242F;
+}
+.nav-border.darkModeBorder {
+  background-color: #17a2b8 !important ;
 }
 
 .text-darkBrown {

@@ -3,11 +3,12 @@ import { createStore } from 'vuex';
 
 const store = createStore({
   state: {
-    isDarkMode: false,
+    isDarkMode: localStorage.getItem('mode') ?? false,
   },
   mutations: {
     toggleMode(state) {
       state.isDarkMode = !state.isDarkMode;
+      localStorage.setItem('mode', state.isDarkMode);
     },
   },
   actions: {

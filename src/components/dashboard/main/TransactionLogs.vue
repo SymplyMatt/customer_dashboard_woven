@@ -1,7 +1,11 @@
 <template>
-    <div class="bg-white px-10 w-full r-8 flex flex-col h-min-content">
+    <div
+        :class="isDarkMode ? 'bg-darkModeColorLight' : 'bg-white'" 
+        class="px-10 w-full r-8 flex flex-col h-min-content">
         <div class="b-btm flex justify-between items-center py-5 w-full ">
-            <div class="uppercase font-medium text-12">Transaction Logs</div>
+            <div 
+            :class="isDarkMode && 'text-white'"
+            class="uppercase font-medium text-12">Transaction Logs</div>
             <div class="text-greenRound text-12 font-extrabold flex gap-1 justify-center items-center"><i class="fa-solid fa-repeat"></i>Resend callback</div>
         </div>
         <div class="flex flex-row gap-5 py-5">
@@ -24,6 +28,7 @@
 </template>
   
 <script>
+    import { useStore } from 'vuex';
     import LogItem from './LogItem.vue'
     export default {
         components : {
@@ -42,6 +47,11 @@
             },
         ],
         };
+    },
+    computed: {
+    isDarkMode() {
+      return useStore().getters.isDarkMode;
+    }
     },
     };
 </script>

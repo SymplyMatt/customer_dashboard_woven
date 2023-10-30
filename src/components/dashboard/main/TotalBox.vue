@@ -1,7 +1,7 @@
 <template>
   <div 
     :class="isDarkMode ? 'bg-darkModeColorLight' : 'bg-white'"
-    class="flex flex-col justify-between items-center w-full radius-12 p-5 gap-6 h-50"
+    class="flex flex-col justify-between items-center w-full radius-12 p-5 gap-6 h-50 overflow-hidden"
   >
     <div class="flex justify-between items-center w-full font-medium gap-5">
       <div 
@@ -89,5 +89,8 @@ export default {
 }
 .hide-overlay {
   visibility: hidden !important;
+}
+.overflow-hidden{
+  overflow: hidden !important;
 }
 </style>

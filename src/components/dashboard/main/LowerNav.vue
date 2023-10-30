@@ -1,7 +1,7 @@
 <template>
     <div 
     :class="isDarkMode ? 'bg-darkModeColorLight' : 'bg-white'"
-    class="flex gap-6 py-2 px-5 w-full r-12">
+    class="flex gap-6 py-2 px-5 w-full r-12 overflow-x-auto">
         <LowerNavItem
         v-for="(i, index) in routes"
         :key="index"

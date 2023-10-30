@@ -1,14 +1,15 @@
-import { createApp } from 'vue';
 import { createStore } from 'vuex';
+
+const localStorageKey = 'myApp';
 
 const store = createStore({
   state: {
-    isDarkMode: localStorage.getItem('mode') ?? false,
+    isDarkMode: localStorage.getItem(localStorageKey) === 'true' || false,
   },
   mutations: {
     toggleMode(state) {
       state.isDarkMode = !state.isDarkMode;
-      localStorage.setItem('mode', state.isDarkMode);
+      localStorage.setItem(localStorageKey, state.isDarkMode);
     },
   },
   actions: {

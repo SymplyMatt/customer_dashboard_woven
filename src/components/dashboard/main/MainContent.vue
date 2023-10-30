@@ -24,7 +24,7 @@
             />
           </div>
           
-          <div class="flex flex-col justify-center items-center  w-full"   v-if="route == 'customers'">
+          <div class="flex flex-col justify-center items-center  w-full table-container"   v-if="route == 'customers'">
             <div class="grid-table-5 justify-between align-center w-full greyBorder-btm px-5 text-headerBlack font-extrabold text-12  py-2">
               <CustomersTableHeaders 
                 v-for="(i, index) in customersHeaders"

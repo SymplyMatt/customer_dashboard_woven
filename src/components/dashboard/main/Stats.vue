@@ -1,5 +1,5 @@
 <template>
-    <div class="flex justify-between items-center w-full gap-5">
+    <div class="mm:flex mm:justify-between items-center w-full gap-5 grid grid-cols-1fr">
       <TotalBox :item="totalAmountReceived"/>
       <TotalBox :item="totalPayouts"/>
       <Chart :item="totalAmountReceived"/>

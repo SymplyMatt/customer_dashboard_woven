@@ -3,10 +3,10 @@
     :class="isDarkMode ? 'bg-darkModeColorLight' : 'bg-white'"
     class="flex flex-col justify-between items-center w-full radius-12 p-5 gap-6 h-50"
   >
-    <div class="flex justify-between items-center w-full font-medium">
+    <div class="flex justify-between items-center w-full font-medium gap-5">
       <div 
       :class="isDarkMode ? 'text-textGreyDark' : 'text-textColorDark '"
-      class="text-12">Total Amount Received</div>
+      class="text-10 md:text-12">Total Amount Received</div>
       <div class="flex flex-col justify-center align-center overlay-container w-24 bg-white text-10">
         <div class="flex justify-center items-center bg-lightGreen p-2 gap-2 w-full cursor-pointer text-thickGreen" @click="changeisOverlayOpen()">
           {{ "This " + getActiveDurationText().duration }} 
@@ -23,7 +23,7 @@
     </div>
     <div 
     :class="isDarkMode && 'text-white'"
-    class="flex items-center w-full text-28 font-extrabold">{{ getActiveDurationText().amount }}</div>
+    class="flex items-center w-full text-20 md:text-28 font-extrabold">{{ getActiveDurationText().amount }}</div>
     <div class="flex justify-between items-center w-full text-brightRed text-12 font-medium border-t border-greyBorder pt-2 cursor-pointer">
       <div class="flex justify-center items-center gap-2">View Transactions <img src="@/assets/active-transactions.png" alt=""></div>
       <i class="fa-solid fa-angle-right"></i>

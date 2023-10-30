@@ -1,7 +1,7 @@
 <template>
   <div 
   :class="isDarkMode ? 'bg-darkModeColorThick' : 'bg-[#F4F6F8] '"
-  class="grid grid-cols-[20%,80%] h-screen h-full dashboard-container">
+  class="grid md:grid-cols-[20%,80%] grid-cols-1fr h-screen h-full dashboard-container">
     <Sidebar /> 
     <main 
     :class="isDarkMode ? 'bg-darkModeColorThick' : 'bg-[#F4F6F8] '"

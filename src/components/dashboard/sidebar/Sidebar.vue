@@ -1,7 +1,7 @@
 <template>
   <div 
   :class="isDarkMode ? 'bg-sideBarDark' : 'bg-sidebar'"
-  class="min-h-screen hidden md:block h-full px-5 py-7 flex flex-col h-screen gap-5">
+  class="hidden md:block min-h-screen h-full px-5 py-7 flex flex-col h-screen gap-5">
     <UserInfo />
     <SidebarLinks />
   </div>

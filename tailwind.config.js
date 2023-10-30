@@ -8,9 +8,9 @@ module.exports = {
       },
       screens: {
         'sm': '640px',
-        'md': '1000px', 
-        'lg': '1280px',
-        'xl': '1440px',
+        'md': '1200px', 
+        'lg': '1500px',
+        'xl': '2000px',
       },
       fontSize: {
         '10': '10px',

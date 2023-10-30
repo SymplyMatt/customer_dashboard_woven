@@ -6,20 +6,17 @@
         </div>
         <div class="flex flex-row gap-5 py-5">
             <div class="flex flex-col justify-center gap-log items-center">
-            <div class="bg-orangeRound rounded-full h-log w-log"></div>
-            <div class="h-10 w-thin h-8 bg-greyRound"></div>
-            <div class="bg-greenRound rounded-full h-log w-log"></div>
+                <div class="bg-orangeRound rounded-full h-log w-log"></div>
+                <div class="h-10 w-thin h-8 bg-greyRound"></div>
+                <div class="bg-greenRound rounded-full h-log w-log"></div>
             </div>
 
-            <div class="flex flex-col justify-center items-center gap-5">
-            <div class="">
-                <div class="font-extrabold text-10">Transaction initiated</div>
-                <div class="font-medium text-14 text-lightBlack">Wednesday, March 22nd 2023, 4:03:29 pm</div>
-            </div>
-            <div class="">
-                <div class="font-extrabold text-10">Transaction initiated</div>
-                <div class="font-medium text-14 text-lightBlack">Wednesday, March 22nd 2023, 4:03:29 pm</div>
-            </div>
+            <div class="flex flex-col justify-center gap-5">
+                <LogItem 
+                    v-for="(i,index) in logs"
+                    :key="index"
+                    :item="i"
+                />
             </div>
         </div>
         <div class="bg-greyBtn py-2 px-10 text-10 align-center max-w-[230px] h-8 my-5 py-5 flex items-center">+ { /* Click to view response */ }</div>
@@ -27,8 +24,25 @@
 </template>
   
 <script>
-  export default {
-    name: 'TransactionLogs',
-}
+    import LogItem from './LogItem.vue'
+    export default {
+        components : {
+            LogItem
+        },
+    data() {
+        return {
+        logs: [
+            {
+            logTitle: "Transaction initiated",
+            date: "Wednesday, March 22nd 2023, 4:03:29 pm",
+            },
+            {
+            logTitle: "Callback sent Response code: 429",
+            date: "Thursday, March 23rd 2023, 2:21:17 am",
+            },
+        ],
+        };
+    },
+    };
 </script>
   

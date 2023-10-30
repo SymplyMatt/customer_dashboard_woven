@@ -40,7 +40,11 @@ module.exports = {
         greyRound : '#D4D6D8',
         orangeRound : '#EB8B1E',
         greyBtn : '#F9FAFB',
-
+        darkModeColorLight : '#192734', 
+        darkModeColorThick : '#15202B', 
+        liveModeToggleDark : '#17a2b8',
+        sideBarDark : '#111921',
+        textGreyDark : '#959da5'
       },
       textColor: {
         'liveGreen': '#0D4840', 

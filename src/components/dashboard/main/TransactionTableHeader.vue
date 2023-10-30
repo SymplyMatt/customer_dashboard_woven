@@ -2,7 +2,8 @@
     <div 
     class="flex flex-row items-center py-2 uppercase gap-2"
     :class="{
-      'justify-center': index === 4 || index === 5 || index === 6
+      'justify-center': index === 4 || index === 5 || index === 6,
+      'text-white' : isDarkMode
     }">
     {{ item.title }}
     <div class="flex flex-col"
@@ -15,9 +16,14 @@
 </template>
   
 <script>
-  
+  import { useStore } from 'vuex';
   export default {
     name: 'TransactionTableHeader',
     props : ['item', 'index'],
+    computed: {
+    isDarkMode() {
+      return useStore().getters.isDarkMode;
+    },
+  },
   }
 </script> 

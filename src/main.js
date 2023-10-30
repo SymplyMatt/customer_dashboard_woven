@@ -1,7 +1,11 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router'
-import './assets/tailwind.css'
-// import 'font-awesome/css/font-awesome.css';
+import { createApp } from 'vue';
+import App from './App.vue';
+import router from './router';
+import store from './vuex/store'; 
+import './assets/tailwind.css';
 
-createApp(App).use(router).mount('#app')
+const app = createApp(App);
+
+app.use(router);
+app.use(store); 
+app.mount('#app');

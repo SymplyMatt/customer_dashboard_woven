@@ -1,28 +1,40 @@
 <template>
-  <div :class="containerClasses">
+  <div 
+  :class="isDarkMode ? 'bg-darkModeColorThick' : 'bg-[#F4F6F8] '"
+  class="grid grid-cols-[20%,80%] h-screen h-full dashboard-container">
     <Sidebar /> 
-    <main :class="mainContentClasses">
+    <main 
+    :class="isDarkMode ? 'bg-darkModeColorThick' : 'bg-[#F4F6F8] '"
+    class="h-full main-dashoard">
       <router-view></router-view>
     </main>
   </div>
 </template>
 
 <script>
+import { useStore } from 'vuex'; 
 import Sidebar from '../../components/dashboard/sidebar/Sidebar.vue'; 
 
 export default {
   name: 'DashboardView',
+  components: {
+    Sidebar, 
+  },
+  computed: {
+    isDarkMode() {
+      const store = useStore();
+      return store.getters.isDarkMode;
+    },
+  },
   data() {
     return {
       containerClasses: "grid grid-cols-[20%,80%] h-screen bg-[#F4F6F8] h-full dashboard-container",
       mainContentClasses: "bg-[#F4F6F8] h-full main-dashoard",
     };
   },
-  components: {
-    Sidebar, 
-  }
 }
 </script>
+
 <style>
   @import url('https://fonts.cdnfonts.com/css/avenir');
 
@@ -35,4 +47,3 @@ export default {
     grid-template-rows: 80px calc(100vh - 80px);
   }
 </style>
-                

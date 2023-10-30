@@ -4,7 +4,9 @@
       <div class="flex flex-col justify-center items-center w-full gap-4">
         <LowerNav :route="route" :toggleView="toggleView"/>
 
-        <div class="flex flex-col w-full  bg-white r-12">
+        <div 
+        :class="isDarkMode ? 'bg-darkModeColorLight' : 'bg-white'"
+        class="flex flex-col w-full  r-12">
           <div class="flex flex-col justify-center items-center  w-full"  v-if="route == 'transactions'">
             <div class="grid-table-7 justify-between align-center w-full greyBorder-btm px-5 text-headerBlack font-extrabold text-12  py-2">
               <TransactionTableHeader 
@@ -58,7 +60,8 @@
   import TransactionTableDataItem from './TransactionTableDataItem.vue'; 
   import CustomersTableHeaders from './CustomersTableHeaders.vue'; 
   import CustomerTableItem from './CustomerTableItem.vue'; 
-  
+  import { useStore } from 'vuex';
+
   export default {
     name: 'MainContent',
     props : ['route', 'toggleView'],
@@ -319,7 +322,15 @@
           },
         ] 
       }
-    }
+    },
+    computed: {
+    durations() {
+      return this.item.map(item => item.duration);
+    },
+    isDarkMode() {
+      return useStore().getters.isDarkMode;
+    },
+  },
   }
 </script>
 <style>

@@ -6,8 +6,8 @@
 
         <div 
         :class="isDarkMode ? 'bg-darkModeColorLight' : 'bg-white'"
-        class="flex flex-col w-full  r-12">
-          <div class="flex flex-col justify-center items-center  w-full"  v-if="route == 'transactions'">
+        class="flex flex-col w-full  r-12 table-area">
+          <div class="flex flex-col justify-center items-center  w-full table-container"  v-if="route == 'transactions'">
             <div class="grid-table-7 justify-between align-center w-full greyBorder-btm px-5 text-headerBlack font-extrabold text-12  py-2">
               <TransactionTableHeader 
                 v-for="(i, index) in transactionsHeaders"
@@ -353,6 +353,16 @@
   }
   .r-12{
     border-radius: 12px;
+  }
+
+  @media (max-width: 900px) {
+  .table-container {
+    width: 1000px !important;
+    overflow-x: scroll !important;
+    }
+  .table-container > div, .table-area {
+    overflow-x: scroll !important;
+  }
   }
 </style>
   

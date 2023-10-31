@@ -5,13 +5,14 @@
       <LowerNav :route="route" :toggleView="toggleView" />
 
       <div :class="isDarkMode ? 'bg-darkModeColorLight' : 'bg-white'" class="flex flex-col w-full r-12 table-area">
+        <i class="fa-solid fa-spinner spinner" v-if="loading"></i>
         <div class="flex flex-col justify-center items-center w-full table-container" v-if="route == 'transactions'">
           <div class="grid-table-7 justify-between align-center w-full greyBorder-btm px-5 text-headerBlack font-extrabold text-12 py-2">
             <TransactionTableHeader v-for="(i, index) in transactionsHeaders" :key="index" :item="i" :index="index + 1" />
           </div>
           <TransactionTableDataItem v-for="(i, index) in transactions" :key="index" :item="i" :index="index + 1" />
         </div>
-
+        
         <div class="flex flex-col justify-center items-center w-full table-container" v-if="route == 'customers'">
           <div class="grid-table-5 justify-between align-center w-full greyBorder-btm px-5 text-headerBlack font-extrabold text-12 py-2">
             <CustomersTableHeaders v-for="(i, index) in customersHeaders" :key="index" :item="i" />
@@ -36,8 +37,7 @@ import CustomersTableHeaders from './CustomersTableHeaders.vue';
 import CustomerTableItem from './CustomerTableItem.vue';
 import { useStore } from 'vuex';
 import { ref, onMounted } from 'vue';
-import axios from 'axios';
-import fetchData from '../../../config/fetchData'
+import fetchData from '../../../config/fetchData';
 
 export default {
   name: 'MainContent',
@@ -58,7 +58,7 @@ export default {
     const loading = ref(true);
     onMounted(async () => {
       try {
-        const response = await fetchData('get','/tables');
+        const response = await fetchData('get', '/tables');
         if (response.status === 200) {
           transactions.value = response.data.transactions;
           transactionsHeaders.value = response.data.transactionsHeaders;
@@ -66,10 +66,11 @@ export default {
           customersHeaders.value = response.data.customersHeaders;
           loading.value = false;
         } else {
-          loading.value = false;
+          loading.value = false; 
         }
       } catch (error) {
         console.error('An error occurred while fetching data');
+        loading.value = false;
       }
     });
 
@@ -81,12 +82,27 @@ export default {
       customers,
       customersHeaders,
       isDarkMode,
+      loading, // Expose loading to the template
     };
   },
 };
 </script>
 
 <style>
+  .spinner {
+    font-size: 50px;
+    animation: spin 1s linear infinite;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: white;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
   .main-content-dashboard {
     height: calc(100vh - 80px);
   }

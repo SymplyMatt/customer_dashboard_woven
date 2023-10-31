@@ -55,7 +55,7 @@ export default {
     const transactionsHeaders = ref([]);
     const customers = ref([]);
     const customersHeaders = ref([]);
-
+    const loading = ref(true);
     onMounted(async () => {
       try {
         const response = await fetchData('get','/tables');
@@ -64,11 +64,12 @@ export default {
           transactionsHeaders.value = response.data.transactionsHeaders;
           customers.value = response.data.customers;
           customersHeaders.value = response.data.customersHeaders;
+          loading.value = false;
         } else {
-          console.error('Failed to fetch data from the API');
+          loading.value = false;
         }
       } catch (error) {
-        console.error('An error occurred while fetching data:', error);
+        console.error('An error occurred while fetching data');
       }
     });
 

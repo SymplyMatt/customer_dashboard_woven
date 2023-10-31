@@ -46,7 +46,7 @@ export default {
   },
   methods: {
     navigateTo() {
-        this.$router.push('/dashboard/transaction/1234');
+        this.$router.push('/dashboard/transaction/' + this.item.id);
       }
     }
 };

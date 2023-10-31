@@ -9,7 +9,7 @@
       class="text-10 md:text-12">Total Amount Received</div>
       <div class="flex flex-col justify-center align-center overlay-container w-24 bg-white text-10">
         <div class="flex justify-center items-center bg-lightGreen p-2 gap-2 w-full cursor-pointer text-thickGreen" @click="changeisOverlayOpen()">
-          {{ "This " + getActiveDurationText().duration }} 
+          {{ item.length > 0 ? "This " + getActiveDurationText()?.duration : '...' }} 
           <i class="fa-solid fa-angle-down" v-if="!isOverlayOpen"></i> 
           <i class="fa-solid fa-angle-up" v-if="isOverlayOpen"></i>
         </div>
@@ -23,7 +23,10 @@
     </div>
     <div 
     :class="isDarkMode && 'text-white'"
-    class="flex items-center w-full text-20 md:text-28 font-extrabold">{{ getActiveDurationText().amount }}</div>
+    class="flex flex-col  w-full text-20 md:text-28 font-extrabold">
+    {{ getActiveDurationText()?.amount || '' }}
+    <div class="skeleton-loader" v-if="item.length < 1"></div>
+  </div>
     <div class="flex justify-between items-center w-full text-brightRed text-12 font-medium border-t border-greyBorder pt-2 cursor-pointer">
       <div class="flex justify-center items-center gap-2">View Transactions <img src="@/assets/active-transactions.png" alt=""></div>
       <i class="fa-solid fa-angle-right"></i>
@@ -93,4 +96,28 @@ export default {
 .overflow-hidden{
   overflow: hidden !important;
 }
+.skeleton-loader{
+  height: 40px;
+  width: 90%;
+  background-color: #eef0f18e;
+  animation: skeleton 1.5s ease infinite;
+  opacity: 0.7;
+}
+
+  @keyframes skeleton {
+    0% {
+      background-color: #eef0f18e;
+      opacity: 0.5;
+    }
+    50% {
+      background-color: rgba(255, 255, 255, 0.209);
+    }
+    75% {
+      background-color: #eef0f18e;
+    }
+    100% {
+      opacity: 0.3;
+      background-color: #ddd;
+  }
+  }
 </style>

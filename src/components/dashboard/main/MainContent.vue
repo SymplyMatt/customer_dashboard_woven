@@ -98,10 +98,6 @@ export default {
     color: white;
   }
 
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
 
   .main-content-dashboard {
     height: calc(100vh - 80px);

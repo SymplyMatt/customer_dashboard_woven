@@ -1,8 +1,8 @@
 <template>
     <div class="mm:flex mm:justify-between items-center w-full gap-5 grid grid-cols-1fr">
-      <TotalBox :item="totalAmountReceived" v-if="totalAmountReceived.length > 0"/>
-      <TotalBox :item="totalPayouts"  v-if="totalPayouts.length > 0"/>
-      <Chart :item="totalAmountReceived" v-if="totalPayouts.length > 0"/>
+      <TotalBox :item="totalAmountReceived"/>
+      <TotalBox :item="totalPayouts"/>
+      <Chart :item="totalAmountReceived"/>
     </div>
   </template>
   
@@ -29,7 +29,6 @@
           totalAmountReceived.value = response.data.totalAmountReceived;
           totalPayouts.value = response.data.totalPayouts;
           loading.value = false;
-          console.log('totalAmountReceived.value: ', totalAmountReceived.value);
         } else {
           loading.value = false; 
         }

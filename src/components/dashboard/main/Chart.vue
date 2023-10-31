@@ -4,7 +4,7 @@
         <div class="text-12">Transaction analytics</div>
         <div class="flex flex-col justify-center align-center overlay-container w-24 bg-white text-10">
           <div class="flex justify-center items-center bg-white p-2 gap-2 w-full cursor-pointer text-thickGreen" @click="changeisOverlayOpen()">
-            {{ "This "+ getActiveDurationText().duration }} <i class="fa-solid fa-angle-down" v-if="!isOverlayOpen"></i> <i class="fa-solid fa-angle-up" v-if="isOverlayOpen"></i>
+            {{ item.length > 0 ? "This "+ getActiveDurationText()?.duration  : ''}} <i class="fa-solid fa-angle-down" v-if="!isOverlayOpen"></i> <i class="fa-solid fa-angle-up" v-if="isOverlayOpen"></i>
           </div>
           <div 
           :class="!isOverlayOpen && 'hide-overlay'"

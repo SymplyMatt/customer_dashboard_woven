@@ -82,7 +82,7 @@ export default {
       customers,
       customersHeaders,
       isDarkMode,
-      loading, // Expose loading to the template
+      loading,
     };
   },
 };

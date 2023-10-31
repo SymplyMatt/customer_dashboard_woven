@@ -38,7 +38,9 @@ export default {
     computedClasses() {
       return {
         'bg-sideBarDark': this.isDarkMode && this.index % 2 === 0,
+        'bg-darkModeColorLight': this.isDarkMode && this.index % 2 !== 0,
         'bg-tableEven': !this.isDarkMode && this.index % 2 === 0,
+        'bg-white': !this.isDarkMode && this.index % 2 !== 0,
       };
     },
   },

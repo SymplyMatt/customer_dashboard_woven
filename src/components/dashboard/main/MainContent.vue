@@ -4,10 +4,10 @@
     <div class="flex flex-col justify-center items-center w-full gap-4">
       <LowerNav :route="route" :toggleView="toggleView" />
 
-      <div :class="isDarkMode ? 'bg-darkModeColorLight' : 'bg-white'" class="flex flex-col w-full r-12 table-area">
-        <i class="fa-solid fa-spinner spinner" v-if="loading"></i>
+      <div :class="computedClasses" class="flex flex-col w-full r-12 table-area">
+        <i :class="spinnerColor" class="fa-solid fa-spinner spinner" v-if="loading"></i>
         <div class="flex flex-col justify-center items-center w-full table-container" v-if="route == 'transactions'">
-          <div class="grid-table-7 justify-between align-center w-full greyBorder-btm px-5 text-headerBlack font-extrabold text-12 py-2">
+          <div :class="computedClasses" class="grid-table-7 justify-between align-center w-full greyBorder-btm px-5 text-headerBlack font-extrabold text-12 py-2">
             <TransactionTableHeader v-for="(i, index) in transactionsHeaders" :key="index" :item="i" :index="index + 1" />
           </div>
           <TransactionTableDataItem v-for="(i, index) in transactions" :key="index" :item="i" :index="index + 1" />
@@ -36,7 +36,7 @@ import TransactionTableDataItem from './TransactionTableDataItem.vue';
 import CustomersTableHeaders from './CustomersTableHeaders.vue';
 import CustomerTableItem from './CustomerTableItem.vue';
 import { useStore } from 'vuex';
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, computed } from 'vue';
 import fetchData from '../../../config/fetchData';
 
 export default {
@@ -56,6 +56,11 @@ export default {
     const customers = ref([]);
     const customersHeaders = ref([]);
     const loading = ref(true);
+
+    const store = useStore();
+
+    const isDarkMode = computed(() => store.getters.isDarkMode);
+
     onMounted(async () => {
       try {
         const response = await fetchData('get', '/tables');
@@ -66,15 +71,13 @@ export default {
           customersHeaders.value = response.data.customersHeaders;
           loading.value = false;
         } else {
-          loading.value = false; 
+          loading.value = false;
         }
       } catch (error) {
         console.error('An error occurred while fetching data');
         loading.value = false;
       }
     });
-
-    const isDarkMode = useStore().getters.isDarkMode;
 
     return {
       transactions,
@@ -84,6 +87,20 @@ export default {
       isDarkMode,
       loading,
     };
+  },
+  computed: {
+    computedClasses() {
+      return {
+        'bg-darkModeColorThick': this.isDarkMode, 
+        'bg-white': !this.isDarkMode, 
+      };
+    },
+    spinnerColor() {
+      return {
+        'text-white': this.isDarkMode, 
+        'text-brightRed': !this.isDarkMode, 
+      };
+    },
   },
 };
 </script>
@@ -95,9 +112,7 @@ export default {
     margin: auto;
     margin-top: 50px;
     margin-bottom: 50px;
-    color: white;
   }
-
 
   .main-content-dashboard {
     height: calc(100vh - 80px);

@@ -43,7 +43,7 @@ export default {
                 'font-medium': !this.isActive || !store.getters.isDarkMode,
                 'pl-11': this.isActive && store.getters.isDarkMode,
                 'pl-4': !this.isActive || !store.getters.isDarkMode,
-                'border-left': this.isActive && store.getters.isDarkMode,
+                'border-left': this.isActive,
             };
         },
     },

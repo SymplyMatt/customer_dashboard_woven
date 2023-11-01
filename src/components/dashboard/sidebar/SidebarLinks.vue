@@ -33,13 +33,13 @@ data() {
                 {
                     text : 'Get Started',
                     path : '/get-started',
-                    icon : "globe.png",
+                    icon : "globe.svg",
                     hasSubMenu : false,
                 },
                 {
                     text : 'Dashboard',
                     path : '/dashboard',
-                    icon : "dashboard.png",
+                    icon : "dashboard.svg",
                     hasSubMenu : false,
                 },
             ]
@@ -50,43 +50,43 @@ data() {
                 {
                     text : 'Transactions',
                     path : '/transactions',
-                    icon : "transactions.png",
+                    icon : "transactions.svg",
                     hasSubMenu : false,
                 },
                 {
                     text : 'People',
                     path : '/people',
-                    icon : "people.png",
+                    icon : "people.svg",
                     hasSubMenu : true,
                 },
                 {
                     text : 'Settlements',
                     path : '/settlements',
-                    icon : "settlements.png",
+                    icon : "settlements.svg",
                     hasSubMenu : false,
                 },
                 {
                     text : 'Payout',
                     path : '/payout',
-                    icon : "payout.png",
+                    icon : "payout.svg",
                     hasSubMenu : false,
                 },
                 {
                     text : 'VNUBANs',
                     path : '/VNUBANs',
-                    icon : "tower.png",
+                    icon : "tower.svg",
                     hasSubMenu : false,
                 },
                 {
                     text : 'Subaccounts',
                     path : '/Subaccounts',
-                    icon : "bank.png",
+                    icon : "bank.svg",
                     hasSubMenu : false,
                 },
                 {
                     text : 'DD Mandates',
                     path : '/DD-Mandates',
-                    icon : "note.png",
+                    icon : "note.svg",
                     hasSubMenu : false,
                 },
             ]
@@ -97,19 +97,19 @@ data() {
                 {
                     text : 'Audit Trails',
                     path : '/Audit-Trails',
-                    icon : "audit.png",
+                    icon : "audit.svg",
                     hasSubMenu : false,
                 },
                 {
                     text : 'Teams',
                     path : '/Teams',
-                    icon : "teams.png",
+                    icon : "teams.svg",
                     hasSubMenu : false,
                 },
                 {
                     text : 'Development',
                     path : '/Development',
-                    icon : "code.png",
+                    icon : "code.svg",
                     hasSubMenu : false,
                 },
             ]
@@ -122,13 +122,13 @@ data() {
                     {
                         text : 'Settings',
                         path : '/Settings',
-                        icon : "settings.png",
+                        icon : "settings.svg",
                         hasSubMenu : false,
                     },
                     {
                         text : 'Logout',
                         path : '/Logout',
-                        icon : "logout.png",
+                        icon : "logout.svg",
                         hasSubMenu : false,
                     },
                 ]

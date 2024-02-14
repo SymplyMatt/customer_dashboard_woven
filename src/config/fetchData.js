@@ -2,7 +2,6 @@ const axios = require('axios');
 
 export default async function sendRequest(method, endpoint, data = null, token = null) {
   const baseURL = 'https://gjcrecycling-f7fa9435192b.herokuapp.com/woven/test'; 
-    console.log('i was called');
   const url = `${baseURL}${endpoint}`;
 
   const headers = {

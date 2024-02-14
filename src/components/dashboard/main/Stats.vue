@@ -25,6 +25,36 @@
     onMounted(async () => {
       try {
         const response = await fetchData('get', '/getTotals');
+        const totalAmountRec = [
+            {
+              duration: 'Week',
+              amount: '₦10,002,075.65',
+            },
+            {
+              duration: 'Month',
+              amount: '₦20,002,075.65',
+            },
+            {
+              duration: 'Year',
+              amount: '₦30,002,075.65',
+            },
+        ];
+        const total_payouts = [
+        {
+            duration: 'Week',
+            amount: '₦200,002,075.65',
+        },
+        {
+            duration: 'Month',
+            amount: '₦300,002,075.65',
+        },
+        {
+            duration: 'Year',
+            amount: '₦400,002,075.65',
+        },
+        ];
+        totalAmountReceived.value = totalAmountRec;
+        totalPayouts.value = total_payouts;
         if (response.status === 200) {
           totalAmountReceived.value = response.data.totalAmountReceived;
           totalPayouts.value = response.data.totalPayouts;

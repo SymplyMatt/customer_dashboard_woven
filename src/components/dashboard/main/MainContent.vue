@@ -64,6 +64,272 @@ export default {
     onMounted(async () => {
       try {
         const response = await fetchData('get', '/tables');
+        const transactions_data = [
+        {
+          id: "5f3c7e1821c7dd8e80d85da6",
+          customerName: "John Doe",
+          customerEmail: "johndoe@gmail.com",
+          amount: "₦27,002,075.65",
+          reference: "wf_py_53_1xyn9myhgrft",
+          channel: "CARD",
+          status: "Successful",
+          type: "Payout",
+          paymentDate: "December 30, 2023 23:25 PM"
+        },
+        {
+          id: "5f3c7e1821c7dd8e80d85da7",
+          customerName: "Alice Johnson",
+          customerEmail: "alicejohnson@yahoo.com",
+          amount: "₦18,762,345.12",
+          reference: "wf_py_72_1xyn9myhgrft",
+          channel: "Transfer",
+          status: "Failed",
+          type: "Collection",
+          paymentDate: "December 30, 2023 23:25 PM"
+        },
+        {
+          id: "5f3c7e1821c7dd8e80d85da8",
+          customerName: "Bob Smith",
+          customerEmail: "bobsmith@hotmail.com",
+          amount: "₦8,550,981.89",
+          reference: "wf_py_19_1xyn9myhgrft",
+          channel: "CARD",
+          status: "Successful",
+          type: "Payout",
+          paymentDate: "December 30, 2023 23:25 PM"
+        },
+        {
+          id: "5f3c7e1821c7dd8e80d85da9",
+          customerName: "Ella Brown",
+          customerEmail: "ellabrown@gmail.com",
+          amount: "₦35,942,743.77",
+          reference: "wf_py_91_1xyn9myhgrft",
+          channel: "Transfer",
+          status: "Successful",
+          type: "Collection",
+          paymentDate: "December 30, 2023 23:25 PM"
+        },
+        {
+          id: "5f3c7e1821c7dd8e80d85daa",
+          customerName: "David Wilson",
+          customerEmail: "davidwilson@outlook.com",
+          amount: "₦13,678,921.50",
+          reference: "wf_py_64_1xyn9myhgrft",
+          channel: "CARD",
+          status: "Failed",
+          type: "Payout",
+          paymentDate: "December 30, 2023 23:25 PM"
+        },
+        {
+          id: "5f3c7e1821c7dd8e80d85dab",
+          customerName: "John Doe",
+          customerEmail: "johndoe@gmail.com",
+          amount: "₦27,002,075.65",
+          reference: "wf_py_53_1xyn9myhgrft",
+          channel: "CARD",
+          status: "Successful",
+          type: "Payout",
+          paymentDate: "December 30, 2023 23:25 PM"
+        },
+        {
+          id: "5f3c7e1821c7dd8e80d85dac",
+          customerName: "Alice Johnson",
+          customerEmail: "alicejohnson@yahoo.com",
+          amount: "₦18,762,345.12",
+          reference: "wf_py_72_1xyn9myhgrft",
+          channel: "Transfer",
+          status: "Failed",
+          type: "Collection",
+          paymentDate: "December 30, 2023 23:25 PM"
+        },
+        {
+          id: "5f3c7e1821c7dd8e80d85dad",
+          customerName: "Bob Smith",
+          customerEmail: "bobsmith@hotmail.com",
+          amount: "₦8,550,981.89",
+          reference: "wf_py_19_1xyn9myhgrft",
+          channel: "CARD",
+          status: "Successful",
+          type: "Payout",
+          paymentDate: "December 30, 2023 23:25 PM"
+        },
+        {
+          id: "5f3c7e1821c7dd8e80d85dae",
+          customerName: "Ella Brown",
+          customerEmail: "ellabrown@gmail.com",
+          amount: "₦35,942,743.77",
+          reference: "wf_py_91_1xyn9myhgrft",
+          channel: "Transfer",
+          status: "Successful",
+          type: "Collection",
+          paymentDate: "December 30, 2023 23:25 PM"
+        },
+        {
+          id: "5f3c7e1821c7dd8e80d85daf",
+          customerName: "David Wilson",
+          customerEmail: "davidwilson@outlook.com",
+          amount: "₦13,678,921.50",
+          reference: "wf_py_64_1xyn9myhgrft",
+          channel: "CARD",
+          status: "Failed",
+          type: "Payout",
+          paymentDate: "December 30, 2023 23:25 PM"
+        },
+        {
+          id: "5f3c7e1821c7dd8e80d85db0",
+          customerName: "David Wilson",
+          customerEmail: "davidwilson@outlook.com",
+          amount: "₦13,678,921.50",
+          reference: "wf_py_64_1xyn9myhgrft",
+          channel: "CARD",
+          status: "Failed",
+          type: "Payout",
+          paymentDate: "December 30, 2023 23:25 PM"
+        },
+        ];  
+        const customers_data = [
+          {
+            "id": "8d09e172-c137-431f-917d-58aa128ff915",
+            "customerName": "John Doe",
+            "customerEmail": "johndoe@gmail.com",
+            "phone": "09183746372",
+            "reference": "COMPLETE SIZE",
+            "nuban": "0938475648",
+            "dateCreated": "December 30, 2023 23:25 PM"
+          },
+          {
+            "id": "40b2d7e9-ea80-4670-8844-0c88dbf11e80",
+            "customerName": "John Doe",
+            "customerEmail": "johndoe@gmail.com",
+            "phone": "09183746372",
+            "reference": "COMPLETE SIZE",
+            "nuban": "0938475648",
+            "dateCreated": "December 30, 2023 23:25 PM"
+          },
+          {
+            "id": "70a6a00d-4db3-4f87-9c49-e545b22cfc2a",
+            "customerName": "John Doe",
+            "customerEmail": "johndoe@gmail.com",
+            "phone": "09183746372",
+            "reference": "COMPLETE SIZE",
+            "nuban": "0938475648",
+            "dateCreated": "December 30, 2023 23:25 PM"
+          },
+          {
+            "id": "3b02f72e-35d2-45fc-a2e3-7e08c4a9a53d",
+            "customerName": "John Doe",
+            "customerEmail": "johndoe@gmail.com",
+            "phone": "09183746372",
+            "reference": "COMPLETE SIZE",
+            "nuban": "0938475648",
+            "dateCreated": "December 30, 2023 23:25 PM"
+          },
+          {
+            "id": "5e3b903e-0fc9-4631-b5c4-794edd05a33e",
+            "customerName": "John Doe",
+            "customerEmail": "johndoe@gmail.com",
+            "phone": "09183746372",
+            "reference": "COMPLETE SIZE",
+            "nuban": "0938475648",
+            "dateCreated": "December 30, 2023 23:25 PM"
+          },
+          {
+            "id": "b9ca8a1d-042e-4fc1-bfad-d6f8b0e42cf5",
+            "customerName": "John Doe",
+            "customerEmail": "johndoe@gmail.com",
+            "phone": "09183746372",
+            "reference": "COMPLETE SIZE",
+            "nuban": "0938475648",
+            "dateCreated": "December 30, 2023 23:25 PM"
+          },
+          {
+            "id": "8f6e62b9-e63e-43eb-8ec0-7cc05f02fde3",
+            "customerName": "John Doe",
+            "customerEmail": "johndoe@gmail.com",
+            "phone": "09183746372",
+            "reference": "COMPLETE SIZE",
+            "nuban": "0938475648",
+            "dateCreated": "December 30, 2023 23:25 PM"
+          },
+          {
+            "id": "a7c1a3a1-6b82-4b15-92b3-e64f05c99a9e",
+            "customerName": "John Doe",
+            "customerEmail": "johndoe@gmail.com",
+            "phone": "09183746372",
+            "reference": "COMPLETE SIZE",
+            "nuban": "0938475648",
+            "dateCreated": "December 30, 2023 23:25 PM"
+          },
+          {
+            "id": "64b50f5e-46aa-43f7-bd6d-289eeab3e81c",
+            "customerName": "John Doe",
+            "customerEmail": "johndoe@gmail.com",
+            "phone": "09183746372",
+            "reference": "COMPLETE SIZE",
+            "nuban": "0938475648",
+            "dateCreated": "December 30, 2023 23:25 PM"
+          },
+          {
+            "id": "19a42a76-6d7a-4694-9c01-ec5f06a29a64",
+            "customerName": "John Doe",
+            "customerEmail": "johndoe@gmail.com",
+            "phone": "09183746372",
+            "reference": "COMPLETE SIZE",
+            "nuban": "0938475648",
+            "dateCreated": "December 30, 2023 23:25 PM"
+          }
+        ];
+        const customers_headers = [
+          {
+              title : 'Customer'
+          },
+          {
+              title : 'Phone'
+          },
+          {
+              title : 'NUBAN'
+          },
+          {
+              title : 'Reference'
+          },
+          {
+              title : 'Date Created'
+          },
+        ];
+        const transaction_headers = [
+            {
+              title : 'Customer',
+              hasSub : false
+            },
+            {
+              title : 'Amount',
+              hasSub : false
+            },
+            {
+              title : 'Reference',
+              hasSub : false
+            },
+            {
+              title : 'Channel',
+              hasSub : false
+            },
+            {
+              title : 'Status',
+              hasSub : true
+            },
+            {
+              title : 'Type',
+              hasSub : true,
+            },
+            {
+              title : 'Payment Date',
+              hasSub : true
+            },
+        ]
+        transactions.value = transactions_data;
+        transactionsHeaders.value = transaction_headers;
+        customers.value = customers_data;
+        customersHeaders.value = customers_headers;
         if (response.status === 200) {
           transactions.value = response.data.transactions;
           transactionsHeaders.value = response.data.transactionsHeaders;

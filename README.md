@@ -23,7 +23,7 @@ Here's an overview of what I've accomplished in this project:
 ## Links
 
 - **GitHub Repository**: (https://github.com/SymplyMatt/customer_dashboard_woven)
-- **Live Demo**: (http://test.smatttech.com)
+- **Live Demo**: (https://customerdashboardvue.vercel.app/)
 
 Thank you for the opportunity to work on this assignment. I'm looking forward to any feedback or further discussions. Please explore the project, and don't hesitate to reach out if you have questions or need additional information.
 
